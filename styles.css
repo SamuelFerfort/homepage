@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  height: 250vh;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
@@ -15,9 +15,8 @@ body {
 }
 
 .bird {
-  max-width: 200px;
-  height: auto;
-  object-fit: cover;
+  max-width: 400px;
+  height: 400px;
 }
 
 header {
@@ -29,19 +28,38 @@ header {
 }
 
 .aboutMe {
-    max-width: 400px;
-    height: auto;
-    background-color: white;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
+  max-width: 1000px;
+  height: auto;
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .links {
-    display: flex;
-    margin-left: auto;
-    gap: 10px;
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+  height: 50px;
+  align-items: center;
 }
 
+.aboutMe > h2 {
+  font-size: 3rem;
+}
+
+.aboutMe > p {
+  font-size: 1.5rem;
+}
+
+.img-container {
+  min-width: 400px;
+}
+.img-container > img {
+  object-fit: cover;
+  aspect-ratio: 1;
+  object-position: center;
+  width: 100%;
+  height: auto;
+}
