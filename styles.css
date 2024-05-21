@@ -1,0 +1,47 @@
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bird {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: header;
+  background-color: lightcoral;
+}
+
+.aboutMe {
+    max-width: 400px;
+    height: auto;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.links {
+    display: flex;
+    margin-left: auto;
+    gap: 10px;
+}
+
