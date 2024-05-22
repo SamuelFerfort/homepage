@@ -23,8 +23,6 @@ header {
 }
 
 .aboutMe {
-  max-width: 1000px;
-  height: auto;
   background-color: white;
   padding: 50px 50px 10px 50px;
   display: flex;
@@ -53,8 +51,8 @@ main > h1 {
 }
 
 .img-container {
-  min-width: 700px;
-  height: 700px;
+  min-width: 40%;
+  min-height: 700px;
   background-image: url(./assets/about-picture.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -65,17 +63,78 @@ main > h1 {
   header {
     flex-direction: column;
   }
+  .aboutMe {
+    align-items: center;
+  }
+  header,
+  main,
+  footer {
+    padding: 50px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-image-container {
+    width: 100%;
+  }
+ 
+ .contact-info > h2 {
+  font-size: 1.5rem !important;
+ }
+}
+
+@media (max-width: 1200px) {
+  header,
+  main {
+    padding: 20px;
+  }
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-container {
+    width: 90%;
+    height: 90%;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-image-container {
+    width: 100%;
+    margin: auto;
+  }
+  footer {
+    padding: 0px;
+  }
+  .contact-info {
+    width: 70%;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-links {
+    margin: auto;
+  }
+  .contact-info > h2 {
+    margin: auto;
+  }
 }
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(350px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
 }
 .card {
   display: flex;
   flex-direction: column;
   height: 450px;
   gap: 15px;
+  max-width: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 .project-title,
@@ -115,9 +174,8 @@ footer {
 }
 .footer-image-container {
   background-image: url(assets/about-picture.jpg);
-  min-width: 700px;
+  width: 700px;
   min-height: 500px;
-  background-image: url(./assets/about-picture.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -128,6 +186,7 @@ footer {
   flex-direction: column;
   gap: 40px;
   font-size: 2.3rem;
+  min-width: 634px;
 }
 .contact-info > h2 {
   font-size: 4rem;
