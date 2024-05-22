@@ -3,6 +3,7 @@ main,
 footer {
   padding: 100px;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -57,6 +58,12 @@ main > h1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  aspect-ratio: 1;
+  display: flex;
+  font-size: 3rem;
+  align-items: flex-end;
+  color: white;
+  justify-content: center;
 }
 
 @media (max-width: 600px) {
@@ -74,14 +81,22 @@ main > h1 {
   footer {
     flex-direction: column;
     align-items: center;
+    padding: 0px;
+    margin: 0px;
   }
   .footer-image-container {
     width: 100%;
   }
- 
- .contact-info > h2 {
-  font-size: 1.5rem !important;
- }
+
+  .contact-info,
+  .aboutMe > p {
+    font-size: 1.7rem !important;
+    width: 100% !important;
+  }
+  .contact-info > h2,
+  .aboutMe > h2 {
+    font-size: 3rem !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -89,14 +104,15 @@ main > h1 {
   main {
     padding: 20px;
   }
+
   header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .img-container {
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 50%;
   }
   footer {
     flex-direction: column;
@@ -107,16 +123,12 @@ main > h1 {
     margin: auto;
   }
   footer {
-    padding: 0px;
+    padding: 10px;
   }
   .contact-info {
-    width: 70%;
+    width: 60%;
   }
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
   .footer-links {
     margin: auto;
   }
@@ -126,8 +138,10 @@ main > h1 {
 }
 .card-container {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 20px;
+  place-items: center;
 }
 .card {
   display: flex;
@@ -141,7 +155,9 @@ main > h1 {
 .description {
   padding-inline: 20px;
 }
-
+main > h1 {
+  text-align: center;
+}
 .project-title {
   font-size: 1.3rem;
   display: flex;
@@ -186,7 +202,7 @@ footer {
   flex-direction: column;
   gap: 40px;
   font-size: 2.3rem;
-  min-width: 634px;
+  min-width: 40%;
 }
 .contact-info > h2 {
   font-size: 4rem;
